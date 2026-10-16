@@ -1,0 +1,33 @@
+Conf t
+Int gi x/x/x
+Switchport mode access
+Switchport access vlan XXX
+Desc XXXXXX_XXXXXX
+End
+
+Wr Mem
+
+Sh Vlan
+
+conf t
+interface gigabitEthernetX/X/XX
+ no source template
+end
+
+
+
+
+Switchport
+
+
+show running-config interface gigabitEthernetX/X/X
+
+show interfaces GigabitEthernet3/0/13 switchport
+
+"Kung ang gusto mo naman ay baguhin mismo ang existing template mula VLAN 403 papuntang ibang VLAN:
+
+conf t
+template TI_ACCESS_ICAFE_GUESTS
+ no switchport access vlan 403
+ switchport access vlan 404
+end
